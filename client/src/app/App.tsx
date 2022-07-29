@@ -1,11 +1,8 @@
 import React from 'react';
-import "antd/dist/antd.css";
 import './App.css';
-import MenuBar from './Components/MenuBar/MenuBar';
+import MenuBar from '../components/MenuBar/MenuBar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Typography } from 'antd';
-import AboutPage from './Pages/AboutPage/AboutPage';
-const { Title, Paragraph, Text, Link } = Typography;
+import AboutPage from '../pages/AboutPage/AboutPage';
 
 function App() {
   return (
@@ -29,10 +26,7 @@ function App() {
 export default App;
 
 
-function Home(props: { name: string }) {
-  return <Typography>
-    <Title>{props.name}</Title>
-    <Paragraph>LALALAL</Paragraph>
-  </Typography>;
+function Home(props: { name: string; }) {
+  return <h2>{props.name}</h2>;
 }
 
